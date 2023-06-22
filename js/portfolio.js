@@ -26,8 +26,6 @@ $(function(){
     $(".Wallpapers_icon").hover(function(){
         $(this).css({
             "background-color" : "#559de464",
-            "border" : "1px solid #add7ff7d",
-            "width" : "71px"
         });
     }, function(){
         if( $(this).hasClass("onclick") ) {
@@ -42,23 +40,35 @@ $(function(){
     
 
     // 바탕화면 lnb 아이콘 hover
-    function pick() {
-        const colorThief = new ColorThief();
-        const color = colorThief.getColor($('.bgimg')[0]);
-        document.querySelector('#c1').style.backgroundColor='rgb('+color+')';
-        var colors = colorThief.getPalette($('.bgimg')[0], 10);
-        console.log(color);
-        for(var i=0; i<colors.length; i++) {
-            $("#c1").after($('<div style="display:inline-block; width:100px; height:100px; border-radius:50%;">').css("background-color", "rgb("+colors[i]+")"));
-        }
+    $(".work_btn").hover(function(){
+        $(this).find("img").attr("src", "img/task02-remove.png");
+    }, function(){
+        $(this).find("img").attr("src", "img/task-remove.png");
+    });
+
+    
+    // 바탕화면 아이콘 더블클릭 이벤트
+    $(".maintain_btn").on("dblclick", function(){
+        $(location).attr("href", "maintain.html")
+    });
+
+
+    // lnb 달력 및 시계 구현
+    var today = new Date();
+    var todayDay = today.getDate();
+    var todayMonth = today.getMonth() + 1;
+    var todayYear = today.getFullYear();
+    var hour = today.getHours();
+    var hour2 = today.getHours() - 12;
+    var minutes = today.getMinutes();
+    
+    if (hour <= 12) {
+        $(".timeAndDate").find("p").text("오전" + hour + ":" + minutes);
+    } else {
+        $(".timeAndDate").find("p").text("오후 " + hour2 + ":" + minutes);
     }
     
-    $(".gnb_btn").on("click", pick());
-
-    
-
-
-
+    $(".timeAndDate").find("span").text(todayYear + "-" + todayMonth + "-" + todayDay);
 
 
 });
