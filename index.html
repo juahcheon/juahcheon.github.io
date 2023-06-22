@@ -5,8 +5,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>portfolio</title>
 
+    <!-- 폰트(Noto Sans Korean) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;400&display=swap" rel="stylesheet">
+    <!-- font-family: 'Noto Sans KR', sans-serif; -->
+
     <!-- 폰트어썸 -->
     <script src="https://kit.fontawesome.com/08d3ec3c73.js" crossorigin="anonymous"></script>
+
+    <!-- color thief -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/color-thief/2.3.0/color-thief.umd.js"></script>
 
     <!-- 제이쿼리 CDN -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
@@ -16,7 +25,9 @@
 <body>
     <div class="wrap">
         <div class="bgimg">
-            <div class="bg"></div>
+            <div class="bg">
+                <img src="img/bg_05.jpeg" alt="">
+            </div>
             <ul class="Wallpapers_icon_wrap">
                 <li class="Wallpapers_icon">
                     <figure>
@@ -27,54 +38,55 @@
                 <li class="Wallpapers_icon">
                     <figure>
                         <img class="main_img" class="direct" src="img/webp/thisPC.webp" alt="내 PC">
-                        <img class="short_img" src="img/shortcut.webp" alt="바로가기">
                         <figcaption>내 PC</figcaption>
                     </figure>
                 </li>
                 <li class="Wallpapers_icon">
                     <figure>
                         <img class="main_img" src="img/webp/control_panel.WebP" alt="제어판">
-                        <img class="short_img" src="img/shortcut.webp" alt="바로가기">
                         <figcaption>제어판</figcaption>
                     </figure>
                 </li>
                 <li class="Wallpapers_icon">
                     <figure>
                         <img class="main_img" src="img/webp/word.WebP" alt="word">
-                        <img class="short_img" src="img/shortcut.webp" alt="바로가기">
-                        <figcaption>word</figcaption>
+                        <figcaption>Word</figcaption>
                     </figure>
                 </li>
                 <li class="Wallpapers_icon">
                     <figure>
                         <img class="main_img" src="img/webp/excel.webp" alt="excel">
-                        <img class="short_img" src="img/shortcut.webp" alt="바로가기">
-                        <figcaption>excel</figcaption>
+                        <figcaption>Excel</figcaption>
                     </figure>
                 </li>
                 <li class="Wallpapers_icon">
                     <figure>
                         <img class="main_img" src="img/webp/powerpoint.webp" alt="powerpoint">
+                        <figcaption>Powerpoint</figcaption>
+                    </figure>
+                </li>
+                <li class="Wallpapers_icon">
+                    <figure>
+                        <img class="main_img" src="img/webp/folder_main.webp" alt="내 문서">
                         <img class="short_img" src="img/shortcut.webp" alt="바로가기">
-                        <figcaption>powerpoint</figcaption>
+                        <figcaption>내 문서</figcaption>
                     </figure>
                 </li>
             </ul>
         </div>
         <div class="lnb">
             <div class="left_lnb">
-                <button type="button" class="gnb_btn">
+                <button type="button" class="gnb_btn left_btn">
                     <i class="fa-brands fa-windows"></i>
                 </button>
-                <button type="button" class="search_btn">
+                <button type="button" class="search_btn left_btn">
                     <i class="fa-solid fa-magnifying-glass"></i>
                 </button>
-                <button>
-                    <i class="fa-solid fa-window-restore"></i>
+                <button type="button" class="work_btn left_btn">
+                    <img src="img/task-remove.png" alt="작업 보기">
                 </button>
             </div>
-            <i class="fa-brands fa-chrome"></i>
-            <i class="fa-regular fa-folder"></i>
+            
             
 
             <div class="right_lnb"></div>
