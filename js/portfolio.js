@@ -62,13 +62,16 @@ $(function(){
     var hour2 = today.getHours() - 12;
     var minutes = today.getMinutes();
     
+
     if (hour <= 12) {
-        $(".timeAndDate").find("p").text("오전" + hour + ":" + minutes);
+        $(".timeAndDate").find("p").text("오전" + hour + ":" + minutes.toString().padStart(2,'0'));
     } else {
-        $(".timeAndDate").find("p").text("오후 " + hour2 + ":" + minutes);
+        $(".timeAndDate").find("p").text("오후 " + hour2 + ":" + minutes.toString().padStart(2,'0'));
     }
     
     $(".timeAndDate").find("span").text(todayYear + "-" + todayMonth + "-" + todayDay);
+
+    setInterval(() => minutes, 500);
 
 
 });
