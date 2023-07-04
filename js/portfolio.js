@@ -54,7 +54,7 @@ $(function(){
 
 
     // lnb 달력 및 시계 구현
-    var today = new Date();
+    var today = new Date;
     var todayDay = today.getDate();
     var todayMonth = today.getMonth() + 1;
     var todayYear = today.getFullYear();
@@ -69,9 +69,9 @@ $(function(){
         $(".timeAndDate").find("p").text("오후 " + hour2 + ":" + minutes.toString().padStart(2,'0'));
     }
     
-    $(".timeAndDate").find("span").text(todayYear + "-" + todayMonth + "-" + todayDay);
+    $(".timeAndDate").find("span").text(todayYear + "-" + todayMonth.toString().padStart(2,'0') + "-" + todayDay.toString().padStart(2,'0'));
 
-    setInterval(() => minutes, 500);
+    
 
 
 });
