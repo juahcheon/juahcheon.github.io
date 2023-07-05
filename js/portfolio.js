@@ -10,7 +10,8 @@ $(function(){
         $(".Wallpapers_icon").not(this).css({
             "background-color" : "transparent",
             "border" : "none"
-    });
+        });
+        $(".Wallpapers_icon").not(this).removeClass("onclick");
     });
 
     $(".bg").on("click",function(){
@@ -64,7 +65,7 @@ $(function(){
     
 
     if (hour <= 12) {
-        $(".timeAndDate").find("p").text("오전" + hour + ":" + minutes.toString().padStart(2,'0'));
+        $(".timeAndDate").find("p").text("오전 " + hour + ":" + minutes.toString().padStart(2,'0'));
     } else {
         $(".timeAndDate").find("p").text("오후 " + hour2 + ":" + minutes.toString().padStart(2,'0'));
     }
