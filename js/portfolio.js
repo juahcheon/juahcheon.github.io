@@ -72,6 +72,13 @@ $(function(){
     
     $(".timeAndDate").find("span").text(todayYear + "-" + todayMonth.toString().padStart(2,'0') + "-" + todayDay.toString().padStart(2,'0'));
 
+
+    /* more option onclick */
+    var moreOptionLeft = $(".more_option").offset().left + 15;
+    
+    $(".more_wrap").css({
+        
+    });
     
 
 
