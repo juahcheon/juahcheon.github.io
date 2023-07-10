@@ -53,6 +53,10 @@ $(function(){
         $(location).attr("href", "maintain.html")
     });
 
+    $(".netflix_btn").on("dblclick", function(){
+        $(location).attr("href", "")
+    });
+
 
     // lnb 달력 및 시계 구현
     var today = new Date;
@@ -77,8 +81,16 @@ $(function(){
     var moreOptionLeft = $(".more_option").offset().left + 15;
     
     $(".more_wrap").css({
-        
+        left: moreOptionLeft,
+        transform: "translatex(-50%)"
     });
+    $(".more_wrap").hide();
+    
+    $(".more_option").on("click", function(){
+        $(".more_wrap").toggle();
+    });
+    
+
     
 
 
