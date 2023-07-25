@@ -68,6 +68,9 @@ button[type=button] {
     font-weight: 100;
     text-shadow: -1px 0 #000, 0 1px #000, 1px 0 #000, 0 -1px #000;
 }
+.netflix_btn a {
+    cursor: auto;
+}
 .left_btn {
     width: 48px;
     height: 49px;
@@ -259,4 +262,91 @@ button[type=button] {
 .more_icon img {
     width: 40%;
     height: 40%;
+}
+
+
+
+
+
+/* 새 창 띄우기 */
+.page_modal {
+    width: 70%;
+    height: 70%;
+    background-color: #fff;
+    position: absolute;
+    left: 50%;
+    top: 45%;
+    transform: translate(-50%, -50%);
+    box-shadow: 0 0 10px rgba(0,0,0,.4);
+}
+.modal_header {
+    width: 100%;
+    height: 80px;
+    background-color: #fff;
+}
+.header_page {
+    width: 100%;
+    height: 50%;
+    background-color: #0078D4;
+}
+.open_page {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    padding: 0 10px;
+    box-sizing: border-box;
+}
+.fa-plus {
+    color: #fff;
+    margin-left: 20px;
+}
+.open_page ul {
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+}
+.open_page ul li {
+    width: 20%;
+    height: 100%;
+    box-sizing: border-box;
+    padding: 10px 0;
+    position: relative;
+}
+.open_page ul li:not(.active_page) a {
+    width: 100%;
+    height: 95%;
+    display: block;
+    border-right: 1px solid #fff;
+    display: flex;
+    align-items: center;
+    cursor: auto;
+}
+/* .open_page ul li:not(.active_page)::after {
+    content: "｜";
+    color: #fff;
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    font-weight: lighter;
+    font-size: 20px;
+} */
+.active_page {
+    border-radius: 10px 10px 0 0;
+    background-color: #fff;
+}
+.exit_page {
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    transform: translateY(-50%);
+    font-size: 16px;
+    color: #fff;
+    font-size: 14px;
+}
+.active_page .exit_page {
+    color: #999;
 }
