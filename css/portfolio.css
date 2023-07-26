@@ -68,9 +68,6 @@ button[type=button] {
     font-weight: 100;
     text-shadow: -1px 0 #000, 0 1px #000, 1px 0 #000, 0 -1px #000;
 }
-.netflix_btn a {
-    cursor: auto;
-}
 .left_btn {
     width: 48px;
     height: 49px;
@@ -278,6 +275,8 @@ button[type=button] {
     top: 45%;
     transform: translate(-50%, -50%);
     box-shadow: 0 0 10px rgba(0,0,0,.4);
+    overflow: hidden;
+    /* opacity: 0; */
 }
 .modal_header {
     width: 100%;
@@ -297,27 +296,34 @@ button[type=button] {
     padding: 0 10px;
     box-sizing: border-box;
 }
-.fa-plus {
+.new_page {
     color: #fff;
-    margin-left: 20px;
+    margin-left: 10px;
+    background-color: transparent;
+    padding: 8px 10px;
+    border-radius: 50%;
+    transition: .5s;
 }
 .open_page ul {
     width: 100%;
-    height: 100%;
+    height: 80%;
     border-radius: 10px;
     display: flex;
     align-items: center;
+    margin-top: 8px;
 }
 .open_page ul li {
-    width: 20%;
-    height: 100%;
-    box-sizing: border-box;
-    padding: 10px 0;
+    width: 17%;
+    height: 103%;
     position: relative;
+    display: flex;
+    align-items: center;
+    z-index: 3;
 }
 .open_page ul li:not(.active_page) a {
     width: 100%;
-    height: 95%;
+    height: 50%;
+    margin: 10px 0;
     display: block;
     border-right: 1px solid #fff;
     display: flex;
@@ -337,16 +343,149 @@ button[type=button] {
 .active_page {
     border-radius: 10px 10px 0 0;
     background-color: #fff;
+    z-index: 4;
+}
+.active_page::before, 
+.active_page::after {
+    content: "";
+    width: 11px;
+    height: 11px;
+    z-index: 1;
+    background-color: #fff;
+    position: absolute;
+    bottom: 0;
+}
+.active_page::before {
+    left: -9px;
+}
+.active_page::after {
+    right: -9px;
+}
+.active_page a::before, 
+.active_page a::after {
+    content: "";
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    z-index: 2;
+    background-color: #0078D4;
+    position: absolute;
+    bottom: 1px;
+}
+.active_page a::before {
+    left: -15px;
+}
+.active_page a::after {
+    right: -15px;
 }
 .exit_page {
     position: absolute;
     top: 50%;
-    right: 10px;
+    right: 7px;
     transform: translateY(-50%);
-    font-size: 16px;
     color: #fff;
     font-size: 14px;
+    background-color: transparent;
+    padding: 0 3px;
+    background-color: transparent;
+    border-radius: 50%;
+}
+.hover_light:hover {
+    background-color: rgba(255,255,255,.1);
+}
+.hover_dark:hover {
+    background-color: rgba(0,0,0,.1);
 }
 .active_page .exit_page {
-    color: #999;
+    color: #333;
+}
+
+
+.header_right {
+    position: absolute;
+    right: 0;
+    top: 1px;
+    display: flex;
+}
+.header_right button {
+    background-color: transparent;
+    width: 40px;
+    height: 30px;
+    transition: .3s;
+    color: #555;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.header_right button:not(.minimize) {
+    justify-content: center;
+}
+.minimize {
+    padding-top: 5px;
+    box-sizing: border-box;
+}
+.header_right button i {
+    font-size: 12px;
+}
+.header_right button .fa-xmark {
+    font-size: 16px;
+}
+.header_right button:hover {
+    color: #111;
+}
+
+.header_address {
+    width: 100%;
+    height: 50%;
+    padding: 4px 5px;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.address_move {
+    width: 100px;
+    height: 100%;
+}
+.address_move button {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: transparent;
+    font-size: 16px;
+    transition: .3s;
+}
+.address_move button:hover {
+    background-color: rgba(0,0,0,.1);
+}
+.address_detail {
+    width: 83%;
+    height: 100%;
+    background-color: rgba(0,0,0,.1);
+    border-radius: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 2px;
+    box-sizing: border-box;
+}
+.address_detail button {
+    width: 33px;
+    height: 28px;
+    border-radius: 20px;
+    background-color: transparent;
+    transition: .3s;
+}
+.address_detail button:hover {
+    background-color: rgba(0,0,0,.1);
+}
+.setting_chrome {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: transparent;
+    transition: .3s;
+}
+.setting_chrome:hover {
+    background-color: rgba(0,0,0,.1);
 }

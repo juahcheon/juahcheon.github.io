@@ -54,7 +54,7 @@ $(function(){
     });
 
     $(".netflix_btn").on("dblclick", function(){
-        $(location).attr("href", "")
+        $(location).attr("href", "netflix.html")
     });
 
 
@@ -90,7 +90,13 @@ $(function(){
         $(".more_wrap").toggle();
     });
     
-
+    $(".open_page ul li").each(function(){
+        if ( $(this).hasClass("active_page") ) {
+            $(this).removeClass("hover_light");
+        };
+    })
+    
+    
     
 
 
