@@ -49,12 +49,34 @@ $(function(){
 
     
     // 바탕화면 아이콘 더블클릭 이벤트
-    $(".maintain_btn").on("dblclick", function(){
-        $(location).attr("href", "maintain.html")
+    $(".chrome_btn").on("dblclick", function(){
+        $(".page_modal").css({
+            opacity: 1,
+            "z-index": 1
+        })
     });
+
+    $(".modal_exit").on("click", function(){
+        $(".page_modal").css({
+            opacity: 0,
+            "z-index": -1
+        })
+    })
 
     $(".netflix_btn").on("dblclick", function(){
         $(location).attr("href", "netflix.html")
+    });
+
+    $(".tomtoms_btn").on("dblclick", function(){
+        $(location).attr("href", "TomToms.html")
+    });
+
+    $(".touslesjours_btn").on("dblclick", function(){
+        $(location).attr("href", "touslesjours.html")
+    });
+
+    $(".escape_btn").on("dblclick", function(){
+        $(location).attr("href", "http://juacheon.dothome.co.kr/index.html")
     });
 
 
@@ -95,6 +117,8 @@ $(function(){
             $(this).removeClass("hover_light");
         };
     })
+
+    
     
     
     
