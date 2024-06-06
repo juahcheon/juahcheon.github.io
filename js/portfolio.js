@@ -76,7 +76,7 @@ $(function(){
     });
 
     $(".escape_btn").on("dblclick", function(){
-        $(location).attr("href", "http://juacheon.dothome.co.kr/index.html")
+        $(location).attr("href", "http://kinn1.dothome.co.kr/index.html")
     });
 
 
