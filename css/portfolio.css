@@ -87,6 +87,9 @@ button[type=button] {
     width: 35%;
     background-color: transparent;
 }
+.folder_btn img {
+    width: 50%;
+}
 .lnb {
     width: 100%;
     height: 50px;
@@ -427,6 +430,9 @@ button[type=button] {
 .minimize {
     padding-top: 5px;
     box-sizing: border-box;
+}
+.fa-window-restore {
+    font-size: 25px;
 }
 .header_right button i {
     font-size: 12px;

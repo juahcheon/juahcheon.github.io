@@ -55,13 +55,23 @@ $(function(){
             "z-index": 1
         })
     });
+    
+    $(".maximum").on("click", function(){
+        
+        $(".page_modal").css({
+            width: "100%",
+            height: "100%",
+            top : "50%"
+        });
+
+    });
 
     $(".modal_exit").on("click", function(){
         $(".page_modal").css({
             opacity: 0,
             "z-index": -1
         })
-    })
+    });
 
     $(".netflix_btn").on("dblclick", function(){
         $(location).attr("href", "netflix.html")

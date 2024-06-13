@@ -18,7 +18,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/color-thief/2.3.0/color-thief.umd.js"></script>
 
     <!-- 제이쿼리 CDN -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
 
     
 
@@ -86,12 +86,7 @@
                         <figcaption>TOM N TOMS(반응형)</figcaption>
                     </figure>
                 </li>
-                <li class="Wallpapers_icon chrome_btn">
-                    <figure>
-                        <img class="main_img" src="img/chrome_logo.svg" alt="크롬">
-                        <figcaption>Chrome</figcaption>
-                    </figure>
-                </li>
+                
             </ul>
             <ul class="Wallpapers_icon_wrap">
                 <li class="Wallpapers_icon escape_btn">
@@ -100,16 +95,16 @@
                         <figcaption>escapeFinal</figcaption>
                     </figure>
                 </li>
-                <li class="Wallpapers_icon kinni_btn">
+                <li class="Wallpapers_icon chrome_btn">
                     <figure>
-                        <img class="main_img" src="img/webp/folder_main.webp" alt="escapeFinal">
-                        <figcaption>escapeFinal</figcaption>
+                        <img class="main_img" src="img/chrome_logo.svg" alt="크롬">
+                        <figcaption>Chrome</figcaption>
                     </figure>
                 </li>
             </ul>
         </div>
 
-        <!-- 새 창 띄우기 -->
+        <!-- Chrome 새 창 띄우기 -->
         <div class="page_modal">
             <div class="modal_wrap">
                 <div class="modal_header">
@@ -130,7 +125,7 @@
                         <div class="header_right">
                             <button class="hover_dark"><i class="fa-solid fa-chevron-down"></i></button>
                             <button class="hover_dark minimize"><i class="fa-solid fa-window-minimize"></i></button>
-                            <button class="hover_dark"><i class="fa-regular fa-square"></i></button>
+                            <button class="hover_dark maximum"><i class="fa-regular fa-square"></i></button>
                             <button class="hover_dark modal_exit"><i class="fa-solid fa-xmark"></i></button>
                         </div>
                     </div>
@@ -162,6 +157,9 @@
                 </button>
                 <button type="button" class="work_btn left_btn lnb_hover">
                     <img src="img/task-remove.png" alt="작업 보기">
+                </button>
+                <button type="button" class="folder_btn left_btn lnb_hover">
+                    <img src="img/folder_lnb.png" alt="하단 폴더열기">
                 </button>
             </div>
             <div class="right_lnb">
